@@ -62,12 +62,20 @@ class VictorianFurnitureFactory extends FurnitureFactory {
 // Implement the Abstract Factory
 
 function furnitureClient(factory: FurnitureFactory) {
-
-
-
+    const chair = factory.createChair();
+    const table = factory.createTable();
+    chair.sitOn();
+    table.eatOn();
 }
 
 // Create modern furniture
+// instead of doing the first 3 lines, we do the others
+const modernFactory = new ModernFurnitureFactory();
+const modernChair = modernFactory.createChair();
+const modernTable = modernFactory.createTable();
 
+furnitureClient(modernFactory);
 
 // Create victorian furniture
+const victorianFactory = new VictorianFurnitureFactory();
+furnitureClient(victorianFactory);

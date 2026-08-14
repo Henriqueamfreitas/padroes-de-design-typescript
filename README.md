@@ -65,3 +65,21 @@ creational patterns
       creation in one singular place
     cons
       more complexity
+    Without this pattern, someone could do:
+      const chair = new ModernChair();
+      const table = new VictorianTable();
+      Maybe that is not allowed in your domain because a room should have one consistent style.
+  
+  prototype pattern
+    Creates a coppy of the object without being costly
+    objects code is not dependent on its classes
+    usages
+      the code isnt dependent on spceifi classes or objects
+      reducing amount of subclasses
+      classes are intiliazed only at runtime
+    pros
+      2 different objects wont be coupled
+      changes on one dont affect the other
+      removes repeated intiliazrion
+    cons
+      complex objetcs can be tough to copy
