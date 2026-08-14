@@ -83,3 +83,19 @@ creational patterns
       removes repeated intiliazrion
     cons
       complex objetcs can be tough to copy
+  
+  singleton pattern
+    single classs creates an object
+    this class makes sure that only one getss created
+    usages
+      enrusre that a class has one single instance
+      provide global access point for that class
+    the only way for client access the ingleton instance is through the getinstance
+    pros
+      only one object created
+      global accsesss
+      only initiliazed the first time
+    cons
+      goes against the sinfle responsibility problem
+      dificult to test
+      problem iin multoithred environment

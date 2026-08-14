@@ -10,12 +10,17 @@ class Circle extends Shape {
     color: string 
     
     constructor(color: string) {
+        super() // indicates inheritance
+        this.color = color
     }
 
     print() : void {
+        console.log(`Printing a ${this.color} circle.`)
     }
 
     clone() : Shape {
+        console.log('cloning a circle')
+        return new Circle(this.color)
     }
 }
 
