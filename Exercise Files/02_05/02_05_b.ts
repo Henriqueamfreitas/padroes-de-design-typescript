@@ -24,10 +24,23 @@ abstract class FurnitureFactory {
 
 class ConcreteFurnitureFactory extends FurnitureFactory {
     public createFurniture(type: string): Furniture {
+        if (type === 'chair') {
+            const chair = new Chair()
+            return chair
+        }
+        if (type === 'table') {
+            const table = new Table()
+            return table
+        }
+        throw new Error('Invalid furniture type');
     }
 }
 
 function factoryClient() {
-
+    const factory = new ConcreteFurnitureFactory()
+    const chair = factory.createFurniture('chair')
+    chair.assemble()
+    const table = factory.createFurniture('table')
+    table.assemble()
 }
 factoryClient()
