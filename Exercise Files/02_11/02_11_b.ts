@@ -5,13 +5,20 @@ class Database {
     }
 
     public static getInstance(): Database {
- 
+        if (!Database.instance) {
+            console.log('creating a single database')
+            Database.instance = new Database();
+            return Database.instance
+        }
+        console.log('database HAS LAREADY BEEN created')
+        return Database.instance
+
     }
 }
 
 // Usage
 function singletonClient() {
-	for (let i = 0; i < 5; i++ ){
+    for (let i = 0; i < 5; i++) {
         Database.getInstance()
     }
 }
