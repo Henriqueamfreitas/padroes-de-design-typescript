@@ -99,3 +99,30 @@ creational patterns
       goes against the sinfle responsibility problem
       dificult to test
       problem iin multoithred environment
+
+
+STRUCTURAL PATTERNS
+  usecases
+    incompatible interfaces to colaborate with each other
+    compsing objects into a tree
+    crete a implified interface
+  adapter
+  composite
+  decorator
+  facade
+
+  adapter pattern
+    is a brdge between two incompatible classes
+    uses a single interface to join diferent functinoaçllities
+    usages
+      reuse subclases that dont have common functionality
+    type
+      object
+        implements interface of one and wraps the other
+      class
+        inherits interface from objetcs at the same time (not all programing languages)
+    pros
+      single responsibilty principle
+      open clçosed principle
+    cons
+      more complex with more interfaces and classes
