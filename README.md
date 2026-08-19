@@ -123,6 +123,17 @@ STRUCTURAL PATTERNS
         inherits interface from objetcs at the same time (not all programing languages)
     pros
       single responsibilty principle
-      open clçosed principle
+      open closed principle
     cons
       more complex with more interfaces and classes
+  
+  composite pattern
+    composes object in a tree like structure
+    objetcs in that strcutrue are tretated in the same way
+    usages
+      simple and complex objects to behave the same way
+    pros
+      makes tree structures convenient
+      open closed principle    
+    cons
+      dificulte to provide a common interface

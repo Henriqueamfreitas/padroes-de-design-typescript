@@ -50,8 +50,15 @@ class TeamMember extends Member {
  
 
  function compositeClient() {
+    const member1 = new TeamMember("PH Ganso", 10, "Midfielder")
+    const member2 = new TeamMember("Neymar Jr", 11, "Forward")
+    const member3 = new TeamMember("rogerio", 1, "goalkeeper")
 
-
+    const roster = new Roster("Brazil National Team")
+    roster.add(member1)
+    roster.add(member2)
+    roster.add(member3)
+    roster.printMemberInfo()
  }
  
  compositeClient()
