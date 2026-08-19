@@ -152,3 +152,15 @@ STRUCTURAL PATTERNS
     cons
       tircky to set up initially
       may be difficult to add dependencies
+  
+  facade pattern 
+    hides the complexities of a complex set of classes - framework
+    uses one single class
+    more generic functionality
+    usage
+      lmited but straughtforward interface to a complex system
+      sructure system into layers
+    pros
+      isolate compleixty of your code
+    cons
+      create relations that shoudl not exist
