@@ -137,3 +137,18 @@ STRUCTURAL PATTERNS
       open closed principle    
     cons
       dificulte to provide a common interface
+  
+  decorator pattern
+    dinamically adds functionality to the behavior of a single object
+    decordator classes wrap the oringal object
+    doesnt affect the objetcs within tha class
+    usages
+      when you need to assing extra behavior to objects
+      when its difficult to exntend behavior with inheritance
+    pros
+      more flexibe alternative than subclassing
+      easier to add//remove resposibilities
+      single responsibility principle
+    cons
+      tircky to set up initially
+      may be difficult to add dependencies

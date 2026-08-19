@@ -65,8 +65,32 @@ class Syrup extends IceCreamDecorator {
     }
 }
 
+// Decorator adds behavior to an object by wrapping it,
+// without changing the original class. u dont change icecream class
+// Without decorator, you might create many classes:
+// VanillaIceCream
+// VanillaWithSprinkles
+// VanillaWithSyrup
+// VanillaWithSprinklesAndSyrup
+// ChocolateWithSprinkles
+// ChocolateWithSyrup
+// ChocolateWithSprinklesAndSyrup
+// That gets messy fast.
+// With Decorator, you compose features:
+// new Syrup(
+//   new Sprinkles(
+//     new IceCream("Vanilla")
+//   )
+// )
+
 // Decorator Client
 function decoratorClient() {
+    const iceCream = new IceCream("Vanilla")
+    const iceCreamWithSprinkles = new Sprinkles(iceCream)
+    iceCreamWithSprinkles.makeIceCream()
+
+    const icecreamwithSprinkklesAndChoolaye = new Syrup(iceCreamWithSprinkles)
+    icecreamwithSprinkklesAndChoolaye.makeIceCream()
 }
 
 decoratorClient()
