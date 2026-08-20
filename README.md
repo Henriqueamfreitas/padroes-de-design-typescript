@@ -261,8 +261,76 @@ BEHAVIORAL PATTERNS
     cons
       subscribers are notified in a random order
   
-  
   strategy pattern
+    defines a faimly of algorithms
+    pyut each algorithm in aseparate class
+    make objects interchangeable
+    usages
+      when you want to indirectyly alter the behaviior at runtime
+      if you have a lot of similiar classes that differ in how they execute certain behaviors
+      if you want to isolate the business logic of the implementation
+    pros
+      opne closed principle
+      swap algorithms at runtime
+      isolate implementation detailes from the coee
+      you can replace inheritance with composition
+    cons
+      make sure that end user have differnt strategies
+      overcomplicate your code
+    abstract class MatchStrategy {
+      abstract execute(): string;
+    }
+
+    class AttackStrategy extends MatchStrategy {
+      execute(): string {
+        return "Team presses high and attacks with many players.";
+      }
+    }
+
+    class DefensiveStrategy extends MatchStrategy {
+      execute(): string {
+        return "Team stays compact and protects the goal.";
+      }
+    }
+
+    class CounterAttackStrategy extends MatchStrategy {
+      execute(): string {
+        return "Team waits deep and attacks quickly after recovering the ball.";
+      }
+    }
+    Context:
+    class Team {
+      constructor(private strategy: MatchStrategy) {}
+
+      setStrategy(strategy: MatchStrategy): void {
+        this.strategy = strategy;
+      }
+
+      play(): void {
+        console.log(this.strategy.execute());
+      }
+    }
+    Usage:
+    const team = new Team(new AttackStrategy());
+
+    team.play();
+
+    team.setStrategy(new DefensiveStrategy());
+    team.play();
+
+    team.setStrategy(new CounterAttackStrategy());
+    team.play();
+    Output:
+    Team presses high and attacks with many players.
+    Team stays compact and protects the goal.
+    Team waits deep and attacks quickly after recovering the ball.    
+
+
+    Strategy vs Factory
+    Factory:
+    Which object should I create?
+    Strategy:
+    Which behavior/algorithm should I use?
 
 
 Pattern | Problem it solves | Raw code smell | When to use | When not to use

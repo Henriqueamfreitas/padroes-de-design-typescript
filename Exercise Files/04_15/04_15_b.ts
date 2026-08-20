@@ -81,7 +81,17 @@ class Context {
  
 // Client 
  function strategyClient() {
+    const cat = new Cat()
+    const dog = new Dog()
+    const speakStrategy = new SpeakStrategy(cat)
+    const barkStrategy = new BarkStrategy(dog)
 
+    const context = new Context(speakStrategy)
+    // contextOne.setStrategy(speakStrategy)
+    console.log(context.executeStrategy())
+
+    context.setStrategy(barkStrategy)
+    console.log(context.executeStrategy())
 
  }
 
