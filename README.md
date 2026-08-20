@@ -164,3 +164,15 @@ STRUCTURAL PATTERNS
       isolate compleixty of your code
     cons
       create relations that shoudl not exist
+
+
+Pattern | Problem it solves | Raw code smell | When to use | When not to use
+Builder   | creating objects | 
+Factory Method | 
+Abstract Factory
+Prototype : duplicate heavy objetcs
+Singleton | instance the class or smetihng only once
+Adapter | external apis with differnent methods
+Composite | creating/grouping
+Decorator | when you want to something to the subclass without editing the orignal one 
+Facade | when there are class with the same method, but they do their thins on their ow way... you dont need to do how they doit, just call the method for all of them
