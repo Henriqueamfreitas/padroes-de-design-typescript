@@ -76,7 +76,13 @@ function commandClient() {
 	
 	let addPassengerCommand = new AddPassengerCommand("Alice")
 	let moveTrainCommand = new MoveTrainCommand("Station B")
-	
+
+    const invoker = new Invoker()
+
+    invoker.setCommand(addPassengerCommand)
+    invoker.executeCommand(train)
+    invoker.setCommand(moveTrainCommand)
+    invoker.executeCommand(train)
 }
 
 commandClient()

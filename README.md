@@ -214,8 +214,25 @@ BEHAVIORAL PATTERNS
     Use Template Method when several classes follow the same workflow,
     but some steps of that workflow vary.
   command patern
-  mediator patern
+    object encapsultates all of the information about a request   
+    allows you to perform a specific action in a latter time
+    usages
+      you want to páss in methods as parameters for an object
+      you want to schedule or queue different operations
+      implement reversable operations
+    pros
+      flexiblility with implementation
+      open closed principle
+      single responsibility principle
+    cons
+      become more complicated more commands you add
 
+
+  mediator patern
+    restircts direct commnuincation between objects
+    forces objects to collaborate via a mediator object
+    usages
+      when specific dependencies prevent your ability to chanfe a class      
 
 
 Pattern | Problem it solves | Raw code smell | When to use | When not to use
