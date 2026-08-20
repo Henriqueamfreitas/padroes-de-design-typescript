@@ -53,7 +53,18 @@ abstract class Observer  {
  }
  
  function observerClient() {
+    const mediaLibrary = new MediaLibrary()
+    const player1 = new MediaPlayer()
+    mediaLibrary.attach(player1)
+    const player2 = new MediaPlayer()
+    mediaLibrary.attach(player2)
+    const player3 = new MediaPlayer()
+    mediaLibrary.attach(player3)
 
+    mediaLibrary.addMedia("video1.mp4")
+    mediaLibrary.addMedia("audio1.mp4")
+
+    mediaLibrary.detach(player2)
  }
  observerClient()
  

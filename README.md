@@ -249,6 +249,21 @@ BEHAVIORAL PATTERNS
     Who should go next?
     What happens after delivery?
 
+  obeserver pattern
+    object (subject) mantain a list od dependents (observers)
+    notify them of any state changes that are being made
+    usages
+      ehwhen changing the state of one objec affects other objects
+      some objects needs to observe other but only for a specific time
+    pros
+      open closed principle
+      enables to stbiluhs relationships at runtime
+    cons
+      subscribers are notified in a random order
+  
+  
+  strategy pattern
+
 
 Pattern | Problem it solves | Raw code smell | When to use | When not to use
 Builder   | creating objects | 
