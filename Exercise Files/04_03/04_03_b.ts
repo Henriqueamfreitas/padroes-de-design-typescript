@@ -40,11 +40,11 @@ class TeamMember  {
     }
 
     hasNext(): boolean {
-        
+        return this.index < this.teamMembers.length
     }
 
     next(): TeamMember{
-       
+       return this.teamMembers[this.index++]
     }
  }
 
@@ -58,7 +58,7 @@ class TeamMember  {
     }
 
     getIterator(): TeamMemberIterator {
-      
+      return new TeamMemberIterator(this.teamMembers)
     }
  }
 

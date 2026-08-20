@@ -165,6 +165,30 @@ STRUCTURAL PATTERNS
     cons
       create relations that shoudl not exist
 
+BEHAVIORAL PATTERNS
+  usecases
+    traversing through elements in a collection
+    reducing dependenct between objects
+    altering behaviors of an objectdefinding a group of algortims
+    comunication between objects
+  iterator pattern
+    traverse trhough elements of a collection wihtou knowing the sctructure
+    usage
+      iding complex data
+      deduce duplicate code
+      unknow data structure
+    pros
+      single repsonsibility principle
+      open closed principle - add aditional code wihtout breaking the code
+    cons
+      only works with simple collections
+      can be less efficient
+  state patern
+  template method patern
+  command patern
+  mediator patern
+
+
 
 Pattern | Problem it solves | Raw code smell | When to use | When not to use
 Builder   | creating objects | 
