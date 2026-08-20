@@ -198,6 +198,21 @@ BEHAVIORAL PATTERNS
       excessive and make codebase less eficient depending on the case
 
   template method patern
+    defines the skeleton of an algorithm in an abstract superclass
+    subslcasse overirdde these methods wihtou changing the structure 
+    usages
+      if you want clients to extend only particular parts of an algorithm
+      strucutre remain the same
+      several classes have almost indetincal algorithms
+    peos
+      easy
+      best used for framkework devleopment
+      avoids code duplication
+    cons 
+      harder to mantain the more staeps that you add
+      limiting on the client side
+    Use Template Method when several classes follow the same workflow,
+    but some steps of that workflow vary.
   command patern
   mediator patern
 

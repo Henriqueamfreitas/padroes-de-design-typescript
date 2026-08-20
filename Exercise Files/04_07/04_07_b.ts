@@ -11,7 +11,9 @@ abstract class Car {
 
     // template method 
     run() : void {
-
+        this.startEngine()
+        this.drive()
+        this.stopEngine()
     }
 
 }
@@ -20,7 +22,7 @@ abstract class Car {
 class Sedan extends Car {
 
     drive() {
-       
+       console.log("Driving a Sedan")
     }
 }
 
@@ -28,7 +30,7 @@ class Sedan extends Car {
 class SUV extends Car {
 
     drive(){
-       
+       console.log("Driving an SUV")
     }
 }
 
