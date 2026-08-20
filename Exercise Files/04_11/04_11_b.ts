@@ -89,17 +89,12 @@ class PackageManager extends Mediator {
     }
 
     notifyAboutDelivery(): void {
-
-        if(!this.isPackagePacked) {
-            this.isPackagePacked = true
-        }
-
-        if(this.packages.length > 0) {
-            let firstPackage = this.packages[0]
+        if (!this.isPackagePacked) this.isPackagePacked = true
+        if(this.packages.length > 0 ){
+            const firstPackage = this.packages[0]
             this.packages.shift()
             firstPackage.allowShipping()
         }
-
     }
 }
 

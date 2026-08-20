@@ -232,7 +232,22 @@ BEHAVIORAL PATTERNS
     restircts direct commnuincation between objects
     forces objects to collaborate via a mediator object
     usages
-      when specific dependencies prevent your ability to chanfe a class      
+      when specific dependencies prevent your ability to chanfe a class
+      when you want to reuse a compnent in a specific program but cant because its tighlty coupled to other classes
+      when you are creating classes with very similar behaviors
+    pros
+      open closed principle
+      single responsibility principle
+      reduces coupling between class and reuse diffenrt components
+    cons
+      can become a god object
+    UPSPackage wants to ship.
+    FedExPackage wants to ship.
+    But neither UPS nor FedEx needs to know:
+    Is another package already shipping?
+    Is there a queue?
+    Who should go next?
+    What happens after delivery?
 
 
 Pattern | Problem it solves | Raw code smell | When to use | When not to use
