@@ -39,7 +39,13 @@ class Shape {
         this.state = state
     }
 
- 
+    draw() : void {
+        this.state.drawShape()
+    }
+
+    erase() : void {
+        this.state.eraseShape()
+    }
 }
 
 

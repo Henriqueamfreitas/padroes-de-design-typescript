@@ -184,6 +184,19 @@ BEHAVIORAL PATTERNS
       only works with simple collections
       can be less efficient
   state patern
+    object oriented state machine
+    allows for objects to alter behavior depending on the state
+    object appears to have changed its class
+    usages
+      object the behaves differently depending on the state
+      if you have a bunch of conditionals in a class
+      if you want to reduce duplciate code across diferent classes
+    pros
+      single repsonsibility principle
+      open closed principle
+    cons
+      excessive and make codebase less eficient depending on the case
+
   template method patern
   command patern
   mediator patern
